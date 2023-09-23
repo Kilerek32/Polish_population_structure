@@ -1,4 +1,4 @@
-﻿city_id,voivodeship_Id,name,total,legitimate,illegitimate,still_births,population,area km2
+﻿city_id,voivodeship_Id,name,total,legitimate,illegitimate,still_births,population,area_km2
 1,10,Białystok,3069,2499,552,18,293413,102
 2,12,Bielsko-Biała,1395,933,458,4,168106,124
 3,2,Bydgoszcz,2789,1835,947,7,334026,176
@@ -36,3 +36,5 @@
 35,12,Zabrze,1196,731,459,6,156935,80
 36,4,Zielona Góra,1273,748,521,4,139667,278
 37,5,Łódź,5454,3342,2087,25,664860,293
+,,,,,,,,
+,,,,,,,,
