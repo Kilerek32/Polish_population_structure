@@ -13,4 +13,4 @@ Birth_data.csv
 city.csv
 voivodeship.csv
 
-<kbd>⌘F</kbd>
+
