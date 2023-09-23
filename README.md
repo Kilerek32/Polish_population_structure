@@ -1,5 +1,5 @@
 # Polish Population Structure
-Author: Kamil Kur
+Author: Kamil Kur <br/>
 Email: kamkur2002@gmail.com
 
 
