@@ -1,4 +1,4 @@
-﻿city_id,voivodeship_Id,name,total,legitimate,illegitimate,still_births,population,area
+﻿city_id,voivodeship_Id,name,total,legitimate,illegitimate,still_births,population,area km2
 1,10,Białystok,3069,2499,552,18,293413,102
 2,12,Bielsko-Biała,1395,933,458,4,168106,124
 3,2,Bydgoszcz,2789,1835,947,7,334026,176
