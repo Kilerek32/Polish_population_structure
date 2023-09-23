@@ -7,7 +7,7 @@ An SQL analysis of reported Polish population structure in 2021 <br/>
 source: https://stat.gov.pl/
 
 # Datasets used
-key datasets(SQL-projects/source_data/CSV) for this case study<br/>
+key datasets for this case study<br/>
 
 * Birth_data.csv<br/>
 * city.csv<br/>
