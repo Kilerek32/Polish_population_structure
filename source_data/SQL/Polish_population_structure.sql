@@ -51,8 +51,17 @@ from voivodeship;
 
 -- voivodeships where illegitimate percentage is higher then average
 
-Select name, (ROUND((illegitimate/(legitimate+illegitimate))*100,2)) as illegitimate_births_percentage 
+Select t1.name, t1.illegitimate_births_percentage
+from (
+	Select name, (ROUND((illegitimate/(legitimate+illegitimate))*100,2)) as illegitimate_births_percentage
 	from voivodeship
-        WHERE (ROUND((illegitimate/(legitimate+illegitimate))*100,2)) > 26.70
-			order by illegitimate_births_percentage  desc
+) as t1,
+(
+	Select ROUND((sum(illegitimate)/sum(legitimate+illegitimate))*100,2) as average_illegitimate
+	from voivodeship
+) as t2
+WHERE t1.illegitimate_births_percentage > t2.average_illegitimate
+order by t1.illegitimate_births_percentage  desc;
 
+
+                
