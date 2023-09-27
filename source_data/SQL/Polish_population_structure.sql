@@ -14,16 +14,31 @@ join voivodeship as v
 	
 order by population desc;
 
--- total births per 100000 inhabitants in Polish cities which count above 100 000 inhabitants
+-- total births to population correlation percentage
 
-Select name, total, population, ROUND((100000*total)/population,0) as births_per_inhabitants 
+Select name, total, population, ROUND((total/population)*100,2) as births_to_population
 	from city
-		order by births_per_inhabitants desc;
+		order by births_to_population DESC;
         
+-- Name top 3 cities by births
+
+Select city_id, name, max(total) as total
+	from city
+		group by city_id
+			order by total desc
+			limit 3;
+            
+-- what is total education level of mothers?
+
+Select sum(higher) as higher, 
+sum(post_secondary) as post_secondary, 
+sum(secondary) as secondary, 
+sum(basic_vacational) as basic_vacational, 
+sum(lower_secondary) as lower_secondary, 
+sum(primary_and_incomplete_primary) as primary_and_incomplete_primary 
+from education_level
+
 -- 
-
-select * from voivodeship
-
 
 
 
