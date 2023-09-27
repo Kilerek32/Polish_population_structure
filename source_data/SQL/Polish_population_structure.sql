@@ -36,10 +36,23 @@ sum(secondary) as secondary,
 sum(basic_vacational) as basic_vacational, 
 sum(lower_secondary) as lower_secondary, 
 sum(primary_and_incomplete_primary) as primary_and_incomplete_primary 
-from education_level
+from education_level;
 
--- 
+-- live births as a percentage of total births
 
+select ROUND((sum(total)/sum(total+still_births))*100,2) as live_births_percentage 
+from voivodeship;
 
+-- legitimate and illegitimate as percentage 
 
+select ROUND((sum(legitimate)/sum(legitimate+illegitimate))*100,2) as legitimate_births_percentage,
+ROUND((sum(illegitimate)/sum(legitimate+illegitimate))*100,2) as illegitimate_births_percentage 
+from voivodeship;
+
+-- voivodeships where illegitimate percentage is higher then average
+
+Select name, (ROUND((illegitimate/(legitimate+illegitimate))*100,2)) as illegitimate_births_percentage 
+	from voivodeship
+        WHERE (ROUND((illegitimate/(legitimate+illegitimate))*100,2)) > 26.70
+			order by illegitimate_births_percentage  desc
 
