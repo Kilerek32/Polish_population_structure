@@ -49,7 +49,7 @@ select ROUND((sum(legitimate)/sum(legitimate+illegitimate))*100,2) as legitimate
 ROUND((sum(illegitimate)/sum(legitimate+illegitimate))*100,2) as illegitimate_births_percentage 
 from voivodeship;
 
--- voivodeships where illegitimate percentage is higher then average
+-- voivodeships where illegitimate percentage is higher than average
 
 Select t1.name, t1.illegitimate_births_percentage
 from (
